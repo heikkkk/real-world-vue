@@ -46,14 +46,14 @@ onMounted(() => {
         :to="{ name: 'event-list', query: { page: page - 1 } }"
         rel="prev"
         v-if="page != 1"
-      >&#60; Previous</RouterLink>
+      > &#60; Previous </RouterLink>
 
       <RouterLink 
         id="page-next"
         :to="{ name: 'event-list', query: { page: page + 1 } }"
         rel="next"
         v-if="hasNextPage"
-      >Next &#62;</RouterLink>
+      > Next &#62; </RouterLink>
     </div>
   </div>
 </template>
@@ -66,7 +66,7 @@ onMounted(() => {
 }
 .pagination {
   display: flex;
-  widows: 290px;
+  width: 290px;
 }
 .pagination a {
   flex: 1;

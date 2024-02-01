@@ -58,6 +58,12 @@ const router = createRouter({
       path: '/:catchAll(.*)',
       name: 'not-found',
       component: NotFound
+    },
+    {
+      path: '/404/:resource',
+      name: '404-resource',
+      component: NotFound,
+      props: true
     }
   ]
 })

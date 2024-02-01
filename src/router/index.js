@@ -5,6 +5,7 @@ import EventLayoutView from '@/views/event/LayoutView.vue'
 import EventDetailsView from '@/views/event/DetailsView.vue'
 import EventRegisterView from '@/views/event/RegisterView.vue'
 import EventEditView from '@/views/event/EditView.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -52,6 +53,11 @@ const router = createRouter({
     {
       path: '/about',
       redirect: { name: 'about' }
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'not-found',
+      component: NotFound
     }
   ]
 })

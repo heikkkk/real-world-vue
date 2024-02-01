@@ -6,6 +6,7 @@ import EventDetailsView from '@/views/event/DetailsView.vue'
 import EventRegisterView from '@/views/event/RegisterView.vue'
 import EventEditView from '@/views/event/EditView.vue'
 import NotFound from '@/views/NotFound.vue'
+import NetworkError from '@/views/NetworkError.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -64,6 +65,11 @@ const router = createRouter({
       name: '404-resource',
       component: NotFound,
       props: true
+    },
+    {
+      path: '/network-error',
+      name: 'network-error',
+      component: NetworkError
     }
   ]
 })
